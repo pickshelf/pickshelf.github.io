@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>골라둔 물건들</title>
+<style>
+:root{--bg:#fffbea;--card:#ffffff;--fg:#1c1b17;--mut:#6f6b5e;--line:#ece4c4;--acc:#ffd400;--accfg:#1c1b17;--no:#1c1b17;--nofg:#ffd400}
+@media (prefers-color-scheme:dark){:root{--bg:#16150f;--card:#22201a;--fg:#f2efe4;--mut:#a7a28f;--line:#38352a;--acc:#ffd400;--accfg:#1c1b17;--no:#ffd400;--nofg:#1c1b17}}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:22px;margin:4px 0 2px;letter-spacing:-.02em}.sub{color:var(--mut);font-size:14px;margin:0 0 14px}
+.disc{font-size:12px;color:var(--mut);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:14px}
+.search{position:sticky;top:0;background:var(--bg);padding:8px 0 10px;z-index:2}
+input{width:100%;font-size:16px;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--fg);outline:none}
+input:focus{border-color:var(--acc)}
+.card{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;margin:10px 0;scroll-margin-top:80px}
+.card.hit{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 40%,transparent)}
+.thumb{position:relative;flex:0 0 88px;height:88px;border-radius:10px;overflow:hidden;background:var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.no{position:absolute;left:4px;top:4px;background:var(--no);color:var(--nofg);font-weight:800;font-size:13px;border-radius:7px;padding:1px 7px}
+.body{flex:1;min-width:0}.name{font-weight:700;font-size:16px;margin:0 0 2px;overflow-wrap:anywhere}.note{color:var(--mut);font-size:13px;margin:0 0 8px}
+.empty{color:var(--mut);text-align:center;padding:30px 0;display:none}
+.hub{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0;text-decoration:none;color:inherit}
+.hub .ic{font-size:30px}.hub b{display:block;font-size:17px}.hub small{color:var(--mut);font-size:13px}.hub::after{content:"›";margin-left:auto;font-size:22px;color:var(--mut)}
+</style></head><body><div class="wrap">
+<h1>골라둔 물건들</h1>
+<a class="hub" href="travel/"><span class="ic">🧳</span><span><b>여행 준비물 체크 리스트</b><small>캐리어·파우치·충전기 등</small></span></a>
+<a class="hub" href="video/"><span class="ic">🎬</span><span><b>영상 속 상품 모음</b><small>영상에 나온 번호로 찾기</small></span></a>
+<p class="sub" style="margin-top:18px;font-size:12px">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</div></body></html>
