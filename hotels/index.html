@@ -176,5 +176,6 @@ sits.forEach(b=>b.addEventListener('click',()=>{sit=b.dataset.s;sits.forEach(x=>
 tiers.forEach(b=>b.addEventListener('click',()=>{tier=b.dataset.t;tiers.forEach(x=>x.classList.toggle('on',x===b));f()}));
 q.addEventListener('input',f);const h=decodeURIComponent(location.hash.slice(1));if(h){const b=chips.find(x=>x.dataset.c===h)||(h.startsWith('s-')&&sits.find(x=>x.dataset.s===h.slice(2)));if(b)b.click();else q.value=h}f();
 </script>
+<script src="/inapp.js" defer></script>
 </body>
 </html>
