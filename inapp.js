@@ -1,7 +1,7 @@
 /* Open pickshelf (and the partner links on it) in the phone's real browser when it was opened inside
    an app's in-app browser (Instagram, Threads, Facebook, KakaoTalk ...). Shopping/booking apps and
    saved logins only work in the real browser.
-   - Android: hand the URL to Chrome with an intent:// link.
+   - Android: hand the URL to the phone's default browser with an intent:// link (no app pinned).
    - KakaoTalk: its own "open externally" scheme.
    - iOS: apps give pages no way to leave on their own, so show a short how-to banner
      (plus a Safari button that works on newer iOS versions). */
@@ -16,14 +16,14 @@
     if (android) {
       var u = new URL(url);
       return "intent://" + u.host + u.pathname + u.search + u.hash +
-        "#Intent;scheme=" + u.protocol.replace(":", "") + ";package=com.android.chrome;S.browser_fallback_url=" +
+        "#Intent;scheme=" + u.protocol.replace(":", "") + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;S.browser_fallback_url=" +
         encodeURIComponent(url) + ";end";
     }
     if (ios) return "x-safari-" + url;  // iOS 17+; older versions ignore it and the banner explains the menu
     return url;
   }
 
-  // Android / KakaoTalk: move the whole page out once (the flag stops a loop if Chrome is missing).
+  // Android / KakaoTalk: move the whole page out once (the flag stops a loop if no browser takes it).
   try {
     if ((android || kakao) && !sessionStorage.getItem("ps_ext")) {
       sessionStorage.setItem("ps_ext", "1");
