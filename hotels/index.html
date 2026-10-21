@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="icon" href="../favicon.png" sizes="32x32"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<meta name="description" content="영상에 나온 숙소 모음"><meta property="og:type" content="website"><meta property="og:title" content="숙소 모음"><meta property="og:description" content="영상에 나온 숙소 모음"><meta property="og:url" content="https://pickshelf.github.io/hotels/"><meta property="og:image" content="https://pickshelf.github.io/hotels/img/1.jpg"><meta property="og:image:width" content="480"><meta property="og:image:height" content="480"><meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="도시·여행 스타일·가격대로 고르는 숙소 모음"><meta property="og:type" content="website"><meta property="og:title" content="여행 준비물 리스트"><meta property="og:description" content="도시·여행 스타일·가격대로 고르는 숙소 모음"><meta property="og:url" content="https://pickshelf.github.io/hotels/"><meta property="og:image" content="https://pickshelf.github.io/hotels/img/1.jpg"><meta property="og:image:width" content="480"><meta property="og:image:height" content="480"><meta name="twitter:card" content="summary_large_image">
 <title>숙소 모음</title>
 <style>
 :root{--bg:#fffbea;--card:#ffffff;--fg:#1c1b17;--mut:#6f6b5e;--line:#ece4c4;--acc:#ffd400;--accfg:#1c1b17;--no:#1c1b17;--nofg:#ffd400}
@@ -39,6 +39,7 @@ a.card:active{transform:scale(.99)}
 .badges{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 6px}
 .badge{font-size:11px;font-weight:700;border-radius:6px;padding:2px 6px;line-height:1.3}
 .badge.tier.value{color:#fff;background:#2e9e5b}.badge.tier.mid{color:#fff;background:#7c5cd6}.badge.tier.high{color:#ffd400;background:#1c1b17}
+.sits .chip{font-size:12px;padding:4px 10px}.sits .chip.on{background:var(--card);border-color:var(--fg);color:var(--fg)}.sits[hidden],.sits .chip[hidden]{display:none}
 .tiers .chip{font-size:12px;padding:4px 10px}.tiers .chip.on{background:var(--card);border-color:var(--fg);color:var(--fg)}
 .badge.gift{color:#fff;background:#e8492f}
 .badge.rocket{color:#1a73e8;background:color-mix(in srgb,#1a73e8 12%,transparent)}
@@ -52,26 +53,128 @@ a.card .badges,a.card .spec,a.card .pts{flex-wrap:nowrap;white-space:nowrap;over
 a.card .badges::-webkit-scrollbar,a.card .spec::-webkit-scrollbar,a.card .pts::-webkit-scrollbar{display:none}
 a.card .badge,a.card .pts li{flex:0 0 auto}
 .pts{display:flex;flex-wrap:wrap;gap:4px;margin:0;padding:0;list-style:none}.pts li{font-size:12px;border:1px solid var(--line);border-radius:6px;padding:1px 6px}
-.card.wait{opacity:1}.card.wait::after{content:none}.wait-note{display:inline-block;font-size:12px;color:var(--mut);border:1px dashed var(--line);border-radius:8px;padding:2px 8px;margin-top:2px}
-</style></head><body><div class="wrap">
+</style></head><body>
+<div class="wrap">
 <div class="ticker" role="note"><div class="track"><span>이 페이지에는 제휴 링크가 포함되어 있으며, 링크를 통해 예약하면 일정액의 수수료를 받을 수 있습니다. </span><span aria-hidden="true">이 페이지에는 제휴 링크가 포함되어 있으며, 링크를 통해 예약하면 일정액의 수수료를 받을 수 있습니다. </span></div></div>
 <h1>숙소 모음</h1>
-<div class="search"><input id="q" inputmode="search" placeholder="번호 또는 도시 (예: 후쿠오카)" autocomplete="off"></div>
+<div class="search">
+<input id="q" inputmode="search" placeholder="번호 또는 도시·숙소명" autocomplete="off">
+<div class="chips sits" id="sits">
+<button class="chip on" data-s="">🧭 모든 여행</button>
+<button class="chip" data-s="solo">👤 혼자</button>
+<button class="chip" data-s="couple">👫 커플·친구</button>
+<button class="chip" data-s="family">👨‍👩‍👧 가족</button>
+<button class="chip" data-s="airport">✈️ 공항 가까움</button>
+<button class="chip" data-s="food">🍜 맛집·쇼핑</button>
+<button class="chip" data-s="resort">🏖️ 휴양·수영장</button>
+</div>
+<div class="chips tiers" id="tiers">
+<button class="chip on" data-t="">💰 전체 가격</button>
+<button class="chip" data-t="value">가성비</button>
+<button class="chip" data-t="mid">중간급</button>
+<button class="chip" data-t="high">고급</button>
+</div>
+<div class="chips" id="chips">
+<button class="chip on" data-c="">전체 도시</button>
+<button class="chip" data-c="fukuoka">🇯🇵 후쿠오카</button>
+<button class="chip" data-c="osaka">🇯🇵 오사카</button>
+<button class="chip" data-c="tokyo">🇯🇵 도쿄</button>
+<button class="chip" data-c="sapporo">🇯🇵 삿포로</button>
+<button class="chip" data-c="okinawa">🇯🇵 오키나와</button>
+<button class="chip" data-c="danang">🇻🇳 다낭</button>
+<button class="chip" data-c="nhatrang">🇻🇳 나트랑</button>
+<button class="chip" data-c="hoian">🇻🇳 호이안</button>
+</div>
+</div>
 <div id="list">
-<a class="card" id="1" data-no="1" data-k="1 후쿠오카 하카타 몬탄 하카타 가성비 숙소 공항 한 정거장" href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1978245&amp;hid=2613173" target="_blank" rel="sponsored noopener">
-<div class="thumb"><img src="img/1.jpg" alt="" loading="lazy"><span class="no">1</span></div>
+<section class="cat" id="fukuoka" data-cat="fukuoka">
+<h2>🇯🇵 후쿠오카</h2>
+<p class="hint">하카타·텐진·나카스</p>
+<div class="items">
+<a class="card" id="1" data-no="1" data-sit="solo couple airport food" data-tier="value" data-k="1 후쿠오카 하카타 몬탄 하카타 가성비 공항 한 정거장 혼자 커플" href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1978245&amp;hid=2613173" target="_blank" rel="sponsored noopener">
+<div class="thumb"><img src="img/1.jpg" alt="" loading="lazy"><span class="no">1</span><span class="badge tier value">가성비</span></div>
 <div class="body">
 <p class="name"><span class="nm">몬탄 하카타</span></p>
-<p class="spec">후쿠오카 · 하카타 · 둘이 1만 엔 초반부터</p>
-<ul class="pts"><li>공항 한 정거장</li><li>역 도보 5분</li><li>평점 9.1</li></ul>
+<p class="spec">하카타 · 둘이 1만 엔 초반부터 · 개인실·도미토리</p>
+<ul class="pts"><li>✈️ 공항 한 정거장</li><li>🚶 역 도보 5분</li><li>⭐ 평점 9.1</li><li>리뷰 1만 8천+</li></ul>
 </div>
 </a>
 </div>
+<p class="soon">준비 중이에요</p>
+</section>
+<section class="cat" id="osaka" data-cat="osaka">
+<h2>🇯🇵 오사카</h2>
+<p class="hint">난바·우메다·신사이바시</p>
+<div class="items">
+
+</div>
+<p class="soon">준비 중이에요</p>
+</section>
+<section class="cat" id="tokyo" data-cat="tokyo">
+<h2>🇯🇵 도쿄</h2>
+<p class="hint">신주쿠·시부야·긴자</p>
+<div class="items">
+
+</div>
+<p class="soon">준비 중이에요</p>
+</section>
+<section class="cat" id="sapporo" data-cat="sapporo">
+<h2>🇯🇵 삿포로</h2>
+<p class="hint">스스키노·오도리</p>
+<div class="items">
+
+</div>
+<p class="soon">준비 중이에요</p>
+</section>
+<section class="cat" id="okinawa" data-cat="okinawa">
+<h2>🇯🇵 오키나와</h2>
+<p class="hint">나하·북부 리조트</p>
+<div class="items">
+
+</div>
+<p class="soon">준비 중이에요</p>
+</section>
+<section class="cat" id="danang" data-cat="danang">
+<h2>🇻🇳 다낭</h2>
+<p class="hint">미케비치·한시장</p>
+<div class="items">
+
+</div>
+<p class="soon">준비 중이에요</p>
+</section>
+<section class="cat" id="nhatrang" data-cat="nhatrang">
+<h2>🇻🇳 나트랑</h2>
+<p class="hint">해변 시내</p>
+<div class="items">
+
+</div>
+<p class="soon">준비 중이에요</p>
+</section>
+<section class="cat" id="hoian" data-cat="hoian">
+<h2>🇻🇳 호이안</h2>
+<p class="hint">올드타운</p>
+<div class="items">
+
+</div>
+<p class="soon">준비 중이에요</p>
+</section>
+</div>
 <p class="empty" id="empty">찾는 숙소가 없어요</p>
-<p class="sub" style="margin-top:18px;font-size:12px">가격은 날짜·인원에 따라 달라요. 예약 전에 꼭 확인하세요.</p>
+<p class="sub" style="margin-top:18px;font-size:12px">가격은 날짜·인원·객실에 따라 달라요. 예약 전에 꼭 확인하세요. 가성비는 둘이 1박 1.5만 엔 미만, 중간급은 1.5만~3만 엔, 고급은 3만 엔 이상 기준이에요.</p>
 </div>
 <script>
-const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],empty=document.getElementById('empty');
-function f(){const v=q.value.trim().toLowerCase(),num=/^\d+$/.test(v);let n=0,exact=null;cards.forEach(c=>{const ok=!v||(num?c.dataset.no===v:c.dataset.k.includes(v));c.style.display=ok?'':'none';c.classList.toggle('hit',!!v&&c.dataset.no===v);if(ok)n++;if(c.dataset.no===v)exact=c});empty.style.display=n?'none':'block';if(exact)exact.scrollIntoView({block:'start'})}
-q.addEventListener('input',f);const h=location.hash.replace('#','');if(h){q.value=h;f()}
-</script></body></html>
+const q=document.getElementById('q'),secs=[...document.querySelectorAll('.cat')],chips=[...document.querySelectorAll('#chips .chip')],tiers=[...document.querySelectorAll('#tiers .chip')],sitRow=document.getElementById('sits'),sits=[...document.querySelectorAll('#sits .chip')],empty=document.getElementById('empty');let cat='',tier='',sit='';
+const allCards=[...document.querySelectorAll('.card')],sitOf=c=>(c.dataset.sit||'').split(' ');
+let shown=0;sits.forEach(b=>{if(!b.dataset.s)return;const has=allCards.some(c=>sitOf(c).includes(b.dataset.s));b.hidden=!has;if(has)shown++});sitRow.hidden=!shown;
+secs.forEach(s=>s.classList.toggle('filled',!!s.querySelector('.card')));
+function f(){const v=q.value.trim().toLowerCase(),num=/^\d+$/.test(v);let n=0,exact=null;
+secs.forEach(s=>{const inCat=!cat||s.dataset.cat===cat;let m=0;s.querySelectorAll('.card').forEach(c=>{const ok=inCat&&(!tier||c.dataset.tier===tier)&&(!sit||sitOf(c).includes(sit)||sitOf(c).includes('all'))&&(!v||(num?c.dataset.no===v:c.dataset.k.includes(v)));c.style.display=ok?'':'none';c.classList.toggle('hit',!!v&&c.dataset.no===v);if(ok)m++;if(c.dataset.no===v)exact=c});
+const show=inCat&&(!(tier||sit)?(!v||m>0||s.querySelector('h2').textContent.toLowerCase().includes(v)):m>0);s.style.display=show?'':'none';if(show)n++});
+empty.style.display=n?'none':'block';if(exact)exact.scrollIntoView({block:'start'})}
+chips.forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.c;chips.forEach(x=>x.classList.toggle('on',x===b));f()}));
+sits.forEach(b=>b.addEventListener('click',()=>{sit=b.dataset.s;sits.forEach(x=>x.classList.toggle('on',x===b));f()}));
+tiers.forEach(b=>b.addEventListener('click',()=>{tier=b.dataset.t;tiers.forEach(x=>x.classList.toggle('on',x===b));f()}));
+q.addEventListener('input',f);const h=decodeURIComponent(location.hash.slice(1));if(h){const b=chips.find(x=>x.dataset.c===h)||(h.startsWith('s-')&&sits.find(x=>x.dataset.s===h.slice(2)));if(b)b.click();else q.value=h}f();
+</script>
+</body>
+</html>
