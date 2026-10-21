@@ -2,14 +2,14 @@
    an app's in-app browser (Instagram, Threads, Facebook, KakaoTalk ...). Shopping/booking apps and
    saved logins only work in the real browser.
    - Android: hand the URL to the phone's default browser with an intent:// link (no app pinned).
+     Partner links always go through the same intent so the booking/shopping app opens if installed.
    - KakaoTalk: its own "open externally" scheme.
    - iOS: apps give pages no way to leave on their own, so show a short how-to banner
      (plus a Safari button that works on newer iOS versions). */
 (function () {
   var ua = navigator.userAgent || "";
   var inApp = /Instagram|Barcelona|Threads|FBAN|FBAV|FB_IAB|FBIOS|KAKAOTALK|NAVER\(inapp|Line\/|DaumApps|everytimeApp/i.test(ua);
-  if (!inApp) return;
-  var android = /Android/i.test(ua), ios = /iPhone|iPad|iPod/i.test(ua), kakao = /KAKAOTALK/i.test(ua);
+  var android = /Android/i.test(ua), ios = /iPhone|iPad|iPod/i.test(ua), kakao = inApp && /KAKAOTALK/i.test(ua);
 
   function external(url) {
     if (kakao) return "kakaotalk://web/openExternal?url=" + encodeURIComponent(url);
@@ -23,21 +23,25 @@
     return url;
   }
 
-  // Android / KakaoTalk: move the whole page out once (the flag stops a loop if no browser takes it).
-  try {
-    if ((android || kakao) && !sessionStorage.getItem("ps_ext")) {
-      sessionStorage.setItem("ps_ext", "1");
-      location.href = external(location.href);
-    }
-  } catch (e) {}
-
-  // Partner links opened from inside the in-app browser also go out to the real browser.
+  // Partner links on Android: ask the OS which app should open the URL (same as tapping a link in Threads),
+  // so installed booking/shopping apps open directly. Browsers like Samsung Internet otherwise keep app
+  // links in a new tab. No app installed -> browser_fallback_url opens it in the browser as before.
   document.addEventListener("click", function (ev) {
     var a = ev.target.closest && ev.target.closest('a[rel~="sponsored"]');
     if (!a || !(android || kakao)) return;
     ev.preventDefault();
     location.href = external(a.href);
   }, true);
+
+  if (!inApp) return;
+
+  // Android / KakaoTalk in-app browsers: move the whole page out once (the flag stops a loop).
+  try {
+    if ((android || kakao) && !sessionStorage.getItem("ps_ext")) {
+      sessionStorage.setItem("ps_ext", "1");
+      location.href = external(location.href);
+    }
+  } catch (e) {}
 
   if (!ios) return;
   var css = ".ps-ext{position:sticky;top:0;z-index:9;margin:-20px -16px 12px;padding:10px 14px;background:#1c1b17;color:#fff;font-size:13px;line-height:1.45;display:flex;gap:10px;align-items:center}" +
