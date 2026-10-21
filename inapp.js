@@ -11,13 +11,23 @@
   var inApp = /Instagram|Barcelona|Threads|FBAN|FBAV|FB_IAB|FBIOS|KAKAOTALK|NAVER\(inapp|Line\/|DaumApps|everytimeApp/i.test(ua);
   var android = /Android/i.test(ua), ios = /iPhone|iPad|iPod/i.test(ua), kakao = inApp && /KAKAOTALK/i.test(ua);
 
-  function external(url) {
+  // Partner apps by link host. Naming the app makes Android open it directly; without a name the
+  // browser that is showing the page may keep the link for itself.
+  var APPS = [[/(^|\.)agoda\.com$/, "com.agoda.mobile.consumer"],
+              [/(^|\.)trip\.com$/, "ctrip.english"],
+              [/(^|\.)coupang\.com$/, "com.coupang.mobile"]];
+  function appFor(host) {
+    for (var i = 0; i < APPS.length; i++) if (APPS[i][0].test(host)) return APPS[i][1];
+    return "";
+  }
+
+  function external(url, toApp) {
     if (kakao) return "kakaotalk://web/openExternal?url=" + encodeURIComponent(url);
     if (android) {
-      var u = new URL(url);
+      var u = new URL(url), pkg = toApp ? appFor(u.host) : "";
       return "intent://" + u.host + u.pathname + u.search + u.hash +
-        "#Intent;scheme=" + u.protocol.replace(":", "") + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;S.browser_fallback_url=" +
-        encodeURIComponent(url) + ";end";
+        "#Intent;scheme=" + u.protocol.replace(":", "") + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;" +
+        (pkg ? "package=" + pkg + ";" : "") + "S.browser_fallback_url=" + encodeURIComponent(url) + ";end";
     }
     if (ios) return "x-safari-" + url;  // iOS 17+; older versions ignore it and the banner explains the menu
     return url;
@@ -30,7 +40,7 @@
     var a = ev.target.closest && ev.target.closest('a[rel~="sponsored"]');
     if (!a || !(android || kakao)) return;
     ev.preventDefault();
-    location.href = external(a.href);
+    location.href = external(a.href, true);
   }, true);
 
   if (!inApp) return;
