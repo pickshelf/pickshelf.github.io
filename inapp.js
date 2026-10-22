@@ -45,11 +45,23 @@
 
   if (!inApp) return;
 
+  // The real browser gets no referrer from the app, so tag the moved page with the app it came from
+  // (utm_source) for analytics.js / Google Analytics to show as the traffic source.
+  var src = (ua.match(/Instagram|Barcelona|Threads|FBAN|FBAV|FB_IAB|FBIOS|KAKAOTALK|NAVER|Line\/|DaumApps|everytimeApp/i) || [""])[0].toLowerCase();
+  src = { barcelona: "threads", fban: "facebook", fbav: "facebook", fb_iab: "facebook", fbios: "facebook", "line/": "line", daumapps: "daum", everytimeapp: "everytime" }[src] || src;
+  var here = new URL(location.href);
+  if (!here.searchParams.has("utm_source")) {
+    here.searchParams.set("utm_source", src);
+    here.searchParams.set("utm_medium", "social");
+  }
+  here = here.href;
+
   // Android / KakaoTalk in-app browsers: move the whole page out once (the flag stops a loop).
   try {
     if ((android || kakao) && !sessionStorage.getItem("ps_ext")) {
       sessionStorage.setItem("ps_ext", "1");
-      location.href = external(location.href);
+      window.psLeaving = true;
+      location.href = external(here);
     }
   } catch (e) {}
 
@@ -60,7 +72,7 @@
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
   var bar = document.createElement("div"); bar.className = "ps-ext";
   bar.innerHTML = '<span>앱 안에서 열렸어요. 오른쪽 위 <b>⋯</b> → <b>외부 브라우저로 열기</b>를 누르면 쇼핑·예약 앱으로 바로 연결돼요.</span>' +
-    '<a href="' + external(location.href) + '">Safari</a><button aria-label="닫기">×</button>';
+    '<a href="' + external(here) + '">Safari</a><button aria-label="닫기">×</button>';
   bar.querySelector("button").onclick = function () { bar.remove(); };
   var wrap = document.querySelector(".wrap") || document.body;
   wrap.insertBefore(bar, wrap.firstChild);
