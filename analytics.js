@@ -5,7 +5,7 @@
    - search: what was typed into the search box (sent once typing pauses).
    Set GA_ID to the site's Measurement ID (GA4 → Admin → Data streams → G-XXXXXXXXXX). */
 (function () {
-  var GA_ID = "G-XXXXXXXXXX";
+  var GA_ID = "G-VDRYK1K890";
   if (GA_ID === "G-XXXXXXXXXX") return;  // not set up yet
 
   window.dataLayer = window.dataLayer || [];
