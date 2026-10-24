@@ -10,10 +10,12 @@ came from (channel and source/medium, including the utm_source inapp.js adds whe
 moves a page out of Instagram/Threads/KakaoTalk), partner link clicks (analytics.js
 link_click) by partner and item, and search-box terms.
 
-Auth: the trablind service account, so this shared Claude Code environment needs no new
-secret. Checked in this order (first one set is used, a broken value fails):
-    TRABLIND_GSC_SA_B64   base64-encoded service-account JSON
-    TRABLIND_GSC_SA_JSON  raw service-account JSON
+Auth: pickshelf's own service account (Google Cloud project pickshelf-ga). Like the sister
+repos, the variables carry the site prefix — several repos share one Claude Code
+environment, and a key from another site must never be picked up by accident.
+Checked in this order (first one set is used, a broken value fails):
+    PICKSHELF_GA_SA_B64   base64-encoded service-account JSON
+    PICKSHELF_GA_SA_JSON  raw service-account JSON
     --key PATH            JSON key file (local/testing)
 The key must belong to SERVICE_ACCOUNT, and that address must be added to the pickshelf
 GA4 property: GA4 → Admin → Property access management → + → Add users.
@@ -46,8 +48,8 @@ import sys
 # Empty: looked up by PROPERTY_NAME among the properties the service account can see.
 PROPERTY_ID = ""
 PROPERTY_NAME = "pickshelf"
-SERVICE_ACCOUNT = "gsc-reader@trablind-gsc.iam.gserviceaccount.com"
-CREDENTIAL_SOURCES = (("TRABLIND_GSC_SA_B64", "base64"), ("TRABLIND_GSC_SA_JSON", "json"))
+SERVICE_ACCOUNT = "pickshelf-ga-reader@pickshelf-ga.iam.gserviceaccount.com"
+CREDENTIAL_SOURCES = (("PICKSHELF_GA_SA_B64", "base64"), ("PICKSHELF_GA_SA_JSON", "json"))
 READ_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 EDIT_SCOPE = "https://www.googleapis.com/auth/analytics.edit"
 DATA_API = "https://analyticsdata.googleapis.com/v1beta"
@@ -95,7 +97,7 @@ def load_credentials(key_path: str | None, scopes: list[str]):
                 raise GAError(f"{name} is not valid {fmt} service-account JSON.") from exc
             break
         else:
-            raise GAError("Set TRABLIND_GSC_SA_B64 or TRABLIND_GSC_SA_JSON, or pass --key.")
+            raise GAError("Set PICKSHELF_GA_SA_B64 or PICKSHELF_GA_SA_JSON, or pass --key.")
     if info.get("client_email") != SERVICE_ACCOUNT:
         raise GAError(f"{source} is the key for {info.get('client_email')!r}, "
                       f"expected {SERVICE_ACCOUNT}.")
