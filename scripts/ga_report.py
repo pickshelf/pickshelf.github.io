@@ -45,8 +45,8 @@ import os
 import sys
 
 # Numeric property ID (GA4 → Admin → Property details), not the G- measurement ID.
-# Empty: looked up by PROPERTY_NAME among the properties the service account can see.
-PROPERTY_ID = ""
+# If emptied: looked up by PROPERTY_NAME among the properties the service account can see.
+PROPERTY_ID = "560488821"
 PROPERTY_NAME = "pickshelf"
 SERVICE_ACCOUNT = "pickshelf-ga-reader@pickshelf-ga.iam.gserviceaccount.com"
 CREDENTIAL_SOURCES = (("PICKSHELF_GA_SA_B64", "base64"), ("PICKSHELF_GA_SA_JSON", "json"))
