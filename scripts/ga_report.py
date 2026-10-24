@@ -30,7 +30,7 @@ Usage:
     python3 scripts/ga_report.py --days 7
     python3 scripts/ga_report.py --start 2026-10-01 --end 2026-10-23
     python3 scripts/ga_report.py --json         # raw JSON instead of tables
-    python3 scripts/ga_report.py --include-bots # count headless-browser visits too
+    python3 scripts/ga_report.py --include-bots # count headless-browser / crawler visits too
     python3 scripts/ga_report.py --setup        # register the link_click custom dimensions (Editor)
 """
 
@@ -67,8 +67,15 @@ CUSTOM_DIMENSIONS = [
 
 # Headless browsers that run the GA tag from data centres: square screen, no referrer.
 # Seen on trablind.com and staycat.kr (see their ga_report/ga_analyze); applied here too.
-BOT_RESOLUTIONS = ["1366x1366", "1280x1200", "1600x1600"]
+# 2026-10-24: 1024x1024 / 800x600 direct visits from (not set) / Israel, same pattern.
+BOT_RESOLUTIONS = ["1366x1366", "1280x1200", "1600x1600", "1024x1024", "800x600"]
 BOT_SOURCES = ["(direct)", "(not set)"]
+# Meta's link-preview crawlers fetch the page when a link is posted on Threads/Instagram and
+# run the tag with a facebook.com referrer, from US/Ireland/Sweden data centres
+# (2000x2000 desktop or 412x915 mobile). pickshelf isn't posted on Facebook, so a facebook
+# referral from outside Korea is the crawler; a Korean one is kept as a real visit.
+META_SOURCES = ["facebook.com", "m.facebook.com"]
+HOME_COUNTRY = "KR"
 INCLUDE_BOTS = False
 
 
@@ -127,10 +134,16 @@ def find_property(session) -> str:
 
 
 def bot_filter() -> dict:
-    return {"andGroup": {"expressions": [
+    headless = {"andGroup": {"expressions": [
         {"filter": {"fieldName": "screenResolution", "inListFilter": {"values": BOT_RESOLUTIONS}}},
         {"filter": {"fieldName": "sessionSource", "inListFilter": {"values": BOT_SOURCES}}},
     ]}}
+    meta = {"andGroup": {"expressions": [
+        {"filter": {"fieldName": "sessionSource", "inListFilter": {"values": META_SOURCES}}},
+        {"notExpression": {"filter": {"fieldName": "countryId",
+                                      "stringFilter": {"value": HOME_COUNTRY}}}},
+    ]}}
+    return {"orGroup": {"expressions": [headless, meta]}}
 
 
 def run_report(session, prop, start, end, dimensions, metrics, limit=100,
@@ -274,7 +287,7 @@ def main(argv: list[str]) -> int:
     p.add_argument("--rows", type=int, default=15, help="rows per table (default 15)")
     p.add_argument("--key", help="service-account JSON key file instead of env")
     p.add_argument("--json", action="store_true", help="raw JSON instead of tables")
-    p.add_argument("--include-bots", action="store_true", help="count headless-browser sessions too")
+    p.add_argument("--include-bots", action="store_true", help="count headless-browser and Meta crawler sessions too")
     p.add_argument("--setup", action="store_true", help="register link_click custom dimensions")
     args = p.parse_args(argv)
 
