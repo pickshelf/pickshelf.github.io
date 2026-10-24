@@ -2,7 +2,8 @@
    an app's in-app browser (Instagram, Threads, Facebook, KakaoTalk ...). Shopping/booking apps and
    saved logins only work in the real browser.
    - Android: hand the URL to the phone's default browser with an intent:// link (no app pinned).
-     Partner links always go through the same intent so the booking/shopping app opens if installed.
+     Partner links always go through the same intent so the booking/shopping app opens if installed
+     (except Coupang: see the click handler).
    - KakaoTalk: its own "open externally" scheme.
    - iOS: apps give pages no way to leave on their own, so show a short how-to banner
      (plus a Safari button that works on newer iOS versions). */
@@ -14,8 +15,7 @@
   // Partner apps by link host. Naming the app makes Android open it directly; without a name the
   // browser that is showing the page may keep the link for itself.
   var APPS = [[/(^|\.)agoda\.com$/, "com.agoda.mobile.consumer"],
-              [/(^|\.)trip\.com$/, "ctrip.english"],
-              [/(^|\.)coupang\.com$/, "com.coupang.mobile"]];
+              [/(^|\.)trip\.com$/, "ctrip.english"]];
   function appFor(host) {
     for (var i = 0; i < APPS.length; i++) if (APPS[i][0].test(host)) return APPS[i][1];
     return "";
@@ -36,9 +36,12 @@
   // Partner links on Android: ask the OS which app should open the URL (same as tapping a link in Threads),
   // so installed booking/shopping apps open directly. Browsers like Samsung Internet otherwise keep app
   // links in a new tab. No app installed -> browser_fallback_url opens it in the browser as before.
+  // Coupang links are left alone: the Coupang app doesn't take link.coupang.com, so the intent falls back
+  // to the browser, and that redirect loses the tap - the Coupang page then can't open the app (Samsung
+  // Internet asks first and the page moves on to the mobile web in 0.3s). A plain tap opens the app.
   document.addEventListener("click", function (ev) {
     var a = ev.target.closest && ev.target.closest('a[rel~="sponsored"]');
-    if (!a || !(android || kakao)) return;
+    if (!a || !(android || kakao) || /(^|\.)coupang\.com$/.test(a.hostname)) return;
     ev.preventDefault();
     location.href = external(a.href, true);
   }, true);
