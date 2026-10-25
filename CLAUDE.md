@@ -11,7 +11,7 @@ shared from Threads/Instagram posts. Korean audience, mostly mobile.
 | `/hotels/` | ~400 hotels in 12 cities, filters for city/zone, style, price tier | Agoda, Trip.com |
 
 Each `index.html` holds its own data, CSS and JS inline. Shared scripts at the root:
-`inapp.js` (in-app browser handling) and `analytics.js` (GA4).
+`inapp.js` (in-app browser handling), `analytics.js` (GA4) and `popular.js` (click-count marks).
 
 ## Editing rules
 
@@ -24,6 +24,7 @@ Each `index.html` holds its own data, CSS and JS inline. Shared scripts at the r
   bare `/hotels/` or `/travel/`.
 - **Cache busting**: pages load `/inapp.js?v=N` and `/analytics.js?v=N`. When you change either script,
   bump `v` in all four pages.
+- `popular.js?v=N` is loaded only by the three list pages; bump `v` there when you change it.
 - After a push, GitHub Pages takes a minute or two to update. Check with `curl`, adding a throwaway
   query string to get past the cache.
 
@@ -91,6 +92,17 @@ sign that new crawler traffic has slipped past the filter.
 create a new key on the same service account (GA access stays as is), then update
 `PICKSHELF_GA_SA_B64`. The key file the owner saved is kept in their own Google Cloud storage,
 not in this repo. Never commit a key.
+
+### Click-count marks: `popular.json`
+
+Cards show "👀 N명이 봤어요" (N = people who tapped that card's partner link in the last 30 days,
+bots excluded). `scripts/popular.py` writes `popular.json`, keeping only items with `MIN_USERS` (3)
+or more people, since a "1명" mark looks worse than none. `popular.js` adds the mark as a yellow bar
+across the bottom of the card photo. A Claude scheduled task ("pickshelf 조회수 갱신", Sonnet) runs
+it daily at 04:17 KST in a fresh session of this Claude environment, which already has
+`PICKSHELF_GA_SA_B64`, and pushes `popular.json` straight to main only when it changes (no PR).
+The key is deliberately not stored in GitHub, so there is no GitHub Actions workflow.
+`python3 scripts/popular.py --dry-run` shows every count, including the ones under the threshold.
 
 ## Findings so far (2026-10-23 ~ 24, ~45 real sessions)
 

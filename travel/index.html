@@ -86,5 +86,5 @@ chips.forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.c;chips.forEach(x
 sits.forEach(b=>b.addEventListener('click',()=>{sit=b.dataset.s;sits.forEach(x=>x.classList.toggle('on',x===b));f()}));
 tiers.forEach(b=>b.addEventListener('click',()=>{tier=b.dataset.t;tiers.forEach(x=>x.classList.toggle('on',x===b));f()}));
 q.addEventListener('input',f);const h=decodeURIComponent(location.hash.slice(1));if(h){const b=chips.find(x=>x.dataset.c===h)||(h.startsWith('s-')&&sits.find(x=>x.dataset.s===h.slice(2)));if(b)b.click();else q.value=h}f();
-</script><script src="/inapp.js?v=5" defer></script><script src="/analytics.js?v=2" defer></script>
+</script><script src="/inapp.js?v=5" defer></script><script src="/analytics.js?v=2" defer></script><script src="/popular.js?v=3" defer></script>
 </body></html>
