@@ -9,7 +9,9 @@ Items below MIN_USERS are left out: "1명이 봤어요" reads as "nobody wants t
 more harm than no mark at all. Until enough traffic builds up the file stays empty and
 the pages show nothing.
 
-Runs daily from .github/workflows/popular.yml (secret PICKSHELF_GA_SA_B64), or by hand:
+Runs daily as a Claude scheduled task ("pickshelf 조회수 갱신", Sonnet, fresh session in the
+Claude environment that holds PICKSHELF_GA_SA_B64), which commits popular.json to main when it
+changes. By hand:
     python3 scripts/popular.py              # write popular.json
     python3 scripts/popular.py --dry-run    # print it, including items under the threshold
 """
