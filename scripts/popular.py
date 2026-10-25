@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Write popular.json: how many people opened each card's partner link recently.
 
-popular.js reads it and puts a "🔥 N명이 봤어요" mark on those cards, so visitors see what
+popular.js reads it and puts a "👀 N명이 봤어요" mark on those cards, so visitors see what
 others are looking at. Counts are people (totalUsers), not taps, so one visitor tapping
 the same item five times counts once. Bots are excluded the same way as ga_report.py.
 

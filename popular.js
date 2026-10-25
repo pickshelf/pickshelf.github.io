@@ -1,4 +1,4 @@
-/* "🔥 N명이 봤어요" on cards that many people opened recently, so visitors see what others look at.
+/* "👀 N명이 봤어요" on cards that many people opened recently, so visitors see what others look at.
    Numbers come from /popular.json, which scripts/popular.py rebuilds daily from GA
    (people who tapped the card's partner link in the last 30 days; small counts are left out there).
    The mark goes first in the card's .pts row, matching the other chips. */
@@ -17,7 +17,7 @@
       if (!pts) return;
       var li = document.createElement("li");
       li.className = "hot";
-      li.textContent = "🔥 " + items[no] + "명이 봤어요";
+      li.textContent = "👀 " + items[no] + "명이 봤어요";
       pts.insertBefore(li, pts.firstChild);
     });
   }).catch(function () {});

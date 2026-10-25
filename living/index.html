@@ -84,5 +84,5 @@ a.card .badge,a.card .pts li{flex:0 0 auto}
 const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],empty=document.getElementById('empty');
 function f(){const v=q.value.trim().toLowerCase(),num=/^\d+$/.test(v);let n=0,exact=null;cards.forEach(c=>{const ok=!v||(num?c.dataset.no===v:c.dataset.k.toLowerCase().includes(v));c.style.display=ok?'':'none';c.classList.toggle('hit',!!v&&c.dataset.no===v);if(ok)n++;if(c.dataset.no===v)exact=c});empty.style.display=n?'none':'block';if(exact)exact.scrollIntoView({block:'start'})}
 q.addEventListener('input',f);const h=decodeURIComponent(location.hash.slice(1));if(h){q.value=h;f()}
-</script><script src="/inapp.js?v=5" defer></script><script src="/analytics.js?v=2" defer></script><script src="/popular.js?v=1" defer></script>
+</script><script src="/inapp.js?v=5" defer></script><script src="/analytics.js?v=2" defer></script><script src="/popular.js?v=2" defer></script>
 </body></html>
