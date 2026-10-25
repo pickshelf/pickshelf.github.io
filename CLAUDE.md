@@ -97,8 +97,8 @@ not in this repo. Never commit a key.
 
 Cards show "👀 N명이 봤어요" (N = people who tapped that card's partner link in the last 30 days,
 bots excluded). `scripts/popular.py` writes `popular.json`, keeping only items with `MIN_USERS` (3)
-or more people, since a "1명" mark looks worse than none. `popular.js` adds the mark to the card's
-`.pts` row. `.github/workflows/popular.yml` runs it daily at 04:17 KST and commits the file when it
+or more people, since a "1명" mark looks worse than none. `popular.js` adds the mark as a yellow bar
+across the bottom of the card photo. `.github/workflows/popular.yml` runs it daily at 04:17 KST and commits the file when it
 changes; it needs the repository secret `PICKSHELF_GA_SA_B64`. `python3 scripts/popular.py --dry-run`
 shows every count, including the ones under the threshold.
 
