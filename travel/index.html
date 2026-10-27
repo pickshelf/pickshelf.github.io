@@ -83,9 +83,9 @@ function f(){const v=q.value.trim().toLowerCase(),num=/^\d+$/.test(v);let n=0,ex
 secs.forEach(s=>{const inCat=!cat||s.dataset.cat===cat;let m=0;s.querySelectorAll('.card').forEach(c=>{const ok=inCat&&(!tier||c.dataset.tier===tier)&&(!sit||sitOf(c).includes(sit)||sitOf(c).includes('all'))&&(!v||(num?c.dataset.no===v:c.dataset.k.includes(v)));c.style.display=ok?'':'none';c.classList.toggle('hit',!!v&&c.dataset.no===v);if(ok)m++;if(c.dataset.no===v)exact=c});
 const show=inCat&&(!(tier||sit)?(!v||m>0||s.querySelector('h2').textContent.toLowerCase().includes(v)):m>0);s.style.display=show?'':'none';if(show)n++});
 empty.style.display=n?'none':'block';if(exact)exact.scrollIntoView({block:'start'})}
-chips.forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.c;chips.forEach(x=>x.classList.toggle('on',x===b));f()}));
+chips.forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.c;chips.forEach(x=>x.classList.toggle('on',x===b));if(!sit)sits.forEach(x=>x.classList.toggle('on',!x.dataset.s&&!cat));f()}));
 sits.forEach(b=>b.addEventListener('click',()=>{sit=b.dataset.s;sits.forEach(x=>x.classList.toggle('on',x===b));f()}));
 tiers.forEach(b=>b.addEventListener('click',()=>{tier=b.dataset.t;tiers.forEach(x=>x.classList.toggle('on',x===b));f()}));
-q.addEventListener('input',f);const h=decodeURIComponent(location.hash.slice(1));if(h){const b=chips.find(x=>x.dataset.c===h)||(h.startsWith('s-')&&sits.find(x=>x.dataset.s===h.slice(2)));if(b){b.click();addEventListener('load',()=>scrollTo(0,0))}else q.value=h}f();
+q.addEventListener('input',f);const h=decodeURIComponent(location.hash.slice(1));if(h){const b=chips.find(x=>x.dataset.c===h)||(h.startsWith('s-')&&sits.find(x=>x.dataset.s===h.slice(2)));if(b){b.click();const r=b.parentElement,c=()=>{r.scrollLeft=b.offsetLeft-r.offsetLeft-(r.clientWidth-b.offsetWidth)/2};c();addEventListener('load',()=>{c();scrollTo(0,0)})}else q.value=h}f();
 </script><script src="/inapp.js?v=5" defer></script><script src="/analytics.js?v=2" defer></script><script src="/popular.js?v=3" defer></script>
 </body></html>
