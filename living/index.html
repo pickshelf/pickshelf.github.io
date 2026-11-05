@@ -17,7 +17,9 @@ input:focus{border-color:var(--acc)}
 .card.hit{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 40%,transparent)}
 .thumb{position:relative;flex:0 0 88px;height:88px;border-radius:10px;overflow:hidden;background:var(--line)}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.no{position:absolute;left:4px;top:4px;background:var(--no);color:var(--nofg);font-weight:800;font-size:13px;border-radius:7px;padding:1px 7px}
+.no{position:absolute;left:4px;top:4px;background:var(--no);color:var(--nofg);font-weight:800;font-size:16px;line-height:1.25;border-radius:8px;padding:1px 8px}
+.qx{position:absolute;right:2px;top:11px;width:44px;height:44px;border:0;background:none;color:var(--mut);font-size:24px;line-height:1;cursor:pointer}.qx[hidden],.more[hidden]{display:none}
+#q{padding-right:46px}.more{text-align:center;margin:14px 0}.more button{font:inherit;font-size:15px;font-weight:700;min-height:44px;padding:10px 20px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
 .body{flex:1;min-width:0}.name{font-weight:700;font-size:16px;margin:0 0 2px;overflow-wrap:anywhere}.note{color:var(--mut);font-size:13px;margin:0 0 8px}
 .empty{color:var(--mut);text-align:center;padding:30px 0;display:none}
 .chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
@@ -55,7 +57,7 @@ a.card .badge,a.card .pts li{flex:0 0 auto}
 </style><body><div class="wrap">
 <div class="ticker" role="note"><div class="track"><span>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. </span><span aria-hidden="true">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. </span></div></div>
 <h1>생활용품 모음</h1>
-<div class="search"><input id="q" inputmode="search" placeholder="영상 번호 또는 상품명 (예: 5)" autocomplete="off"></div>
+<div class="search"><input id="q" inputmode="search" placeholder="영상 번호 또는 상품명 (예: 5)" autocomplete="off"><button type="button" class="qx" id="qx" aria-label="검색어 지우기" hidden>×</button></div>
 <div id="list">
 <a class="card" id="31" data-no="31" data-k="31 주방 자동 과일 깎는 기계 사과 배 껍질 깎이 전동" href="https://link.coupang.com/a/iiRhNb74sS" target="_blank" rel="sponsored noopener"><div class="thumb"><img src="img/31.jpg" alt="" loading="lazy"><span class="no">31</span></div><div class="body"><p class="name"><span class="nm">자동 과일 껍질깎이</span></p><p class="spec">꽂고 누르는 전동 필러</p><ul class="pts"><li>버튼 하나로 한 줄 깎기</li><li>칼 없이 사과·배</li></ul></div></a>
 <a class="card" id="30" data-no="30" data-k="30 생활 미니 세탁기 휴대용 터빈 양말 속옷 아기옷 여행 USB" href="https://link.coupang.com/a/iiQ9aJiY1Y" target="_blank" rel="sponsored noopener"><div class="thumb"><img src="img/30.jpg" alt="" loading="lazy"><span class="no">30</span></div><div class="body"><p class="name"><span class="nm">휴대용 미니 세탁기</span></p><p class="spec">물에 넣는 터빈 세탁기</p><ul class="pts"><li>대야에 넣고 전원 ON</li><li>양말·속옷 따로 빨기</li></ul></div></a>
@@ -88,10 +90,12 @@ a.card .badge,a.card .pts li{flex:0 0 auto}
 <a class="card" id="3" data-no="3" data-k="3 욕실 곰팡이 제거젤 실리콘 곰팡이 문지르지 말고 발라 두고 닦기" href="https://link.coupang.com/a/hZMFEVZbcO" target="_blank" rel="sponsored noopener"><div class="thumb"><img src="img/3.jpg" alt="" loading="lazy"><span class="no">3</span></div><div class="body"><p class="name"><span class="nm">곰팡이 제거젤</span></p><p class="spec">욕실 실리콘용 젤</p><ul class="pts"><li>문지르지 않아도 됨</li><li>바르고 기다렸다 닦기</li></ul></div></a>
 <a class="card" id="2" data-no="2" data-k="2 욕실 곰팡이 제거젤 실리콘 타일 줄눈에 바르고 기다렸다 닦는 젤" href="https://link.coupang.com/a/hZMFEVZbcO" target="_blank" rel="sponsored noopener"><div class="thumb"><img src="img/2.jpg" alt="" loading="lazy"><span class="no">2</span></div><div class="body"><p class="name"><span class="nm">곰팡이 제거젤</span></p><p class="spec">실리콘·타일 줄눈용 젤</p><ul class="pts"><li>줄눈까지</li><li>바르고 기다렸다 닦기</li></ul></div></a>
 <a class="card" id="1" data-no="1" data-k="1 욕실 미끄럼방지 욕실화 젖은 욕실 바닥 eva" href="https://link.coupang.com/a/hZMKoV6vYW" target="_blank" rel="sponsored noopener"><div class="thumb"><img src="img/1.jpg" alt="" loading="lazy"><span class="no">1</span></div><div class="body"><p class="name"><span class="nm">미끄럼방지 욕실화</span></p><p class="spec">EVA 욕실화</p><ul class="pts"><li>젖은 바닥 미끄럼 방지</li></ul></div></a>
-</div><p class="empty" id="empty">찾는 상품이 없어요</p>
+</div><p class="more" id="more" hidden><button type="button" id="all">전체 목록 보기</button></p><p class="empty" id="empty">찾는 상품이 없어요</p>
 </div><script>
 const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],empty=document.getElementById('empty');
-function f(){const v=q.value.trim().toLowerCase(),num=/^\d+$/.test(v);let n=0,exact=null;cards.forEach(c=>{const ok=!v||(num?c.dataset.no===v:c.dataset.k.toLowerCase().includes(v));c.style.display=ok?'':'none';c.classList.toggle('hit',!!v&&c.dataset.no===v);if(ok)n++;if(c.dataset.no===v)exact=c});empty.style.display=n?'none':'block';if(exact)exact.scrollIntoView({block:'start'})}
+
+const qx=document.getElementById('qx'),more=document.getElementById('more'),emptyTxt=empty.textContent;function norm(){const r=q.value.trim().toLowerCase(),m=r.match(/^(?:no\.?|#|n)?\s*(\d+)\s*번?$/);return m?[m[1],true]:[r,false]}function go(el){const y=el.getBoundingClientRect().top+scrollY-document.querySelector('.search').offsetHeight-12;scrollTo(0,Math.max(0,y))}function ui(v,num,n){qx.hidden=!q.value;more.hidden=!v;empty.textContent=num&&!n?v+'번은 아직 준비 중이에요':emptyTxt}function clr(){const h=decodeURIComponent(location.hash.slice(1));q.value='';if(h&&norm()[0]!==h&&/^\d+$/.test(h))history.replaceState(null,'',location.pathname+location.search);f();scrollTo(0,0)}qx.onclick=()=>{clr();q.focus()};document.getElementById('all').onclick=clr;addEventListener('hashchange',()=>{const h=decodeURIComponent(location.hash.slice(1));if(/^\d+$/.test(h)){q.value=h;f()}});
+function f(){const [v,num]=norm();let n=0,exact=null;cards.forEach(c=>{const ok=!v||(num?c.dataset.no===v:c.dataset.k.toLowerCase().includes(v));c.style.display=ok?'':'none';c.classList.toggle('hit',!!v&&c.dataset.no===v);if(ok)n++;if(c.dataset.no===v)exact=c});empty.style.display=n?'none':'block';ui(v,num,n);if(exact)go(exact)}
 q.addEventListener('input',f);const h=decodeURIComponent(location.hash.slice(1));if(h){q.value=h;f()}
 </script><script src="/inapp.js?v=5" defer></script><script src="/analytics.js?v=2" defer></script><script src="/popular.js?v=3" defer></script>
 </body></html>
