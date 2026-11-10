@@ -15,6 +15,8 @@ Each `index.html` holds its own data, CSS and JS inline. Shared scripts at the r
 
 ## Editing rules
 
+- **No Coupang names or logos on cards** (2026-11-10: Coupang Partners final approval was rejected for /travel/ because of "쿠팡의 상호명 및 로고 무단 침해"). Never show 로켓배송·판매자로켓·로켓와우·🚀 badges, Coupang logos, or Coupang banner images. Coupang may appear only in the required disclosure sentence. Also skip time-limited promos such as 증정 or 1+1 badges.
+
 - **Cards**: `<… class="card" id="N" data-no="N" data-k="search keywords">`. `N` is the number
   shown in the post/video, so never renumber existing cards. Add new ones at the end.
 - **Affiliate links** carry `rel="sponsored noopener"`. Both scripts depend on it: inapp.js routes
