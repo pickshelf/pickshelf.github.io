@@ -1,0 +1,863 @@
+{
+ "date": "2026-11-11",
+ "reason": "대표님 2026-11-11 \"pickshelf 링크 바꿔\" — 쿠팡 딥링크 API(채널 pickshelf)로 재발급. 카드 번호·내용 변경 없음.",
+ "partner": "AF5245913",
+ "channel": "pickshelf",
+ "cards": [
+  {
+   "page": "living",
+   "no": 39,
+   "product_url": "https://www.coupang.com/vp/products/8393375362?itemId=24263604478",
+   "old": "https://link.coupang.com/a/ivkWA9UBwG",
+   "new": "https://link.coupang.com/a/iAx12SaSVU",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 37,
+   "product_url": "https://www.coupang.com/vp/products/9635363754?itemId=28785390740",
+   "old": "https://link.coupang.com/a/it5AP7Tk0y",
+   "new": "https://link.coupang.com/a/iAx12Xp9EW",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 36,
+   "product_url": "https://www.coupang.com/vp/products/8599839412?itemId=24936166071",
+   "old": "https://link.coupang.com/a/it42H5hVNA",
+   "new": "https://link.coupang.com/a/iAx1210oTY",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 35,
+   "product_url": "https://www.coupang.com/vp/products/6795446337?itemId=26078360355",
+   "old": "https://link.coupang.com/a/it4PZNV4QC",
+   "new": "https://link.coupang.com/a/iAx126ZeXk",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 34,
+   "product_url": "https://www.coupang.com/vp/products/8585647701?itemId=25680008252",
+   "old": "https://link.coupang.com/a/it4MKJNVrU",
+   "new": "https://link.coupang.com/a/iAx13dml6y",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 33,
+   "product_url": "https://www.coupang.com/vp/products/6437492979?itemId=13920563766",
+   "old": "https://link.coupang.com/a/iqhGYQO8Vo",
+   "new": "https://link.coupang.com/a/iAx13h0nLM",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 32,
+   "product_url": "https://www.coupang.com/vp/products/9338788792",
+   "old": "https://link.coupang.com/a/iqhBD3SlLU",
+   "new": "https://link.coupang.com/a/iAx13n1aLc",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 31,
+   "product_url": "https://www.coupang.com/vp/products/5270024643?itemId=7508427245",
+   "old": "https://link.coupang.com/a/iiRhNb74sS",
+   "new": "https://link.coupang.com/a/iAx13sGG72",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 30,
+   "product_url": "https://www.coupang.com/vp/products/7329737017?itemId=18815499563",
+   "old": "https://link.coupang.com/a/iiQ9aJiY1Y",
+   "new": "https://link.coupang.com/a/iAx13yKIrA",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 29,
+   "product_url": "https://www.coupang.com/vp/products/8371093710?itemId=24190287307",
+   "old": "https://link.coupang.com/a/iiQ7kFoGoC",
+   "new": "https://link.coupang.com/a/iAx13Gbu5k",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 28,
+   "product_url": "https://www.coupang.com/vp/products/8443664934?itemId=28945858007",
+   "old": "https://link.coupang.com/a/iiQ6c3Ti4i",
+   "new": "https://link.coupang.com/a/iAx13K5Xqe",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 27,
+   "product_url": "https://www.coupang.com/vp/products/7234880020?itemId=18367866506",
+   "old": "https://link.coupang.com/a/iiQ42lX5Wu",
+   "new": "https://link.coupang.com/a/iAx13PMEfs",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 26,
+   "product_url": "https://www.coupang.com/vp/products/8597545874?itemId=24929404429",
+   "old": "https://link.coupang.com/a/iiRfxLJxFk",
+   "new": "https://link.coupang.com/a/iAx13UKjQq",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 25,
+   "product_url": "https://www.coupang.com/vp/products/6786596292?itemId=15977201103",
+   "old": "https://link.coupang.com/a/iiQ1o7xYSy",
+   "new": "https://link.coupang.com/a/iAx130bmtE",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 24,
+   "product_url": "https://www.coupang.com/vp/products/6635626012?itemId=15147316332",
+   "old": "https://link.coupang.com/a/ip7YPgw4Jw",
+   "new": "https://link.coupang.com/a/iAx135rNE4",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 23,
+   "product_url": "https://www.coupang.com/vp/products/8349083911?itemId=24126355319",
+   "old": "https://link.coupang.com/a/ip7WbPyBEG",
+   "new": "https://link.coupang.com/a/iAx14b3QMm",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 22,
+   "product_url": "https://www.coupang.com/vp/products/9515051799?itemId=28358481548",
+   "old": "https://link.coupang.com/a/h63LQYykmq",
+   "new": "https://link.coupang.com/a/iAx14f4TLg",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 21,
+   "product_url": "https://www.coupang.com/vp/products/9428439397?itemId=28029986737",
+   "old": "https://link.coupang.com/a/h5WZBgz9LE",
+   "new": "https://link.coupang.com/a/iAx14kIVqu",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 20,
+   "product_url": "https://www.coupang.com/vp/products/9548806643?itemId=28488779237",
+   "old": "https://link.coupang.com/a/h5WT6tL16y",
+   "new": "https://link.coupang.com/a/iAx14pjILA",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 19,
+   "product_url": "https://www.coupang.com/vp/products/9584578321?itemId=28610714096",
+   "old": "https://link.coupang.com/a/h5WKIPnSQ8",
+   "new": "https://link.coupang.com/a/iAx14uea6u",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 18,
+   "product_url": "https://www.coupang.com/vp/products/8734473427?itemId=25382492334",
+   "old": "https://link.coupang.com/a/h5WEpy4vIq",
+   "new": "https://link.coupang.com/a/iAx2cXXW9Y",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 17,
+   "product_url": "https://www.coupang.com/vp/products/9086324997?itemId=26697597661",
+   "old": "https://link.coupang.com/a/h5WyXbiYRE",
+   "new": "https://link.coupang.com/a/iAx2c3ba5k",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 16,
+   "product_url": "https://www.coupang.com/vp/products/9779498099?itemId=29277294855",
+   "old": "https://link.coupang.com/a/h5WtwACW3U",
+   "new": "https://link.coupang.com/a/iAx2c78QGi",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 15,
+   "product_url": "https://www.coupang.com/vp/products/9659073528?itemId=28874336179",
+   "old": "https://link.coupang.com/a/h5WmU6gC5s",
+   "new": "https://link.coupang.com/a/iAx2dcSKLA",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 14,
+   "product_url": "https://www.coupang.com/vp/products/9682192368?itemId=28953131615",
+   "old": "https://link.coupang.com/a/h5WdQour5U",
+   "new": "https://link.coupang.com/a/iAx2dhd0Qm",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 13,
+   "product_url": "https://www.coupang.com/vp/products/9731835335?itemId=29122143590",
+   "old": "https://link.coupang.com/a/h5V7fPMxxs",
+   "new": "https://link.coupang.com/a/iAx2dlwEXk",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 12,
+   "product_url": "https://www.coupang.com/vp/products/8264337715?itemId=23811376882",
+   "old": "https://link.coupang.com/a/h5VY1rfyjQ",
+   "new": "https://link.coupang.com/a/iAx2dqJSSG",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 11,
+   "product_url": "https://www.coupang.com/vp/products/9767139266?itemId=29233686545",
+   "old": "https://link.coupang.com/a/h5HOeH0KTA",
+   "new": "https://link.coupang.com/a/iAx2dvY9BI",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 10,
+   "product_url": "https://www.coupang.com/vp/products/8391814238?itemId=24258188523",
+   "old": "https://link.coupang.com/a/h5EaCWdLae",
+   "new": "https://link.coupang.com/a/iAx2dAhNIG",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 9,
+   "product_url": "https://www.coupang.com/vp/products/8650408104?itemId=25111644287",
+   "old": "https://link.coupang.com/a/h5D5nRO2Bo",
+   "new": "https://link.coupang.com/a/iAx2dEVPnU",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 8,
+   "product_url": "https://www.coupang.com/vp/products/4315977269?itemId=5015288445",
+   "old": "https://link.coupang.com/a/h5rNZyJKHQ",
+   "new": "https://link.coupang.com/a/iAx2dJOdQ4",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 7,
+   "product_url": "https://www.coupang.com/vp/products/9738580631?itemId=29146273418",
+   "old": "https://link.coupang.com/a/h3VbZIjFQG",
+   "new": "https://link.coupang.com/a/iAx2dO9n4e",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 6,
+   "product_url": "https://www.coupang.com/vp/products/9752314325?itemId=29201763349",
+   "old": "https://link.coupang.com/a/h3USdRc7dA",
+   "new": "https://link.coupang.com/a/iAx2dTKbpk",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 5,
+   "product_url": "https://www.coupang.com/vp/products/9754103331?itemId=29206202066",
+   "old": "https://link.coupang.com/a/h0lcJtylhs",
+   "new": "https://link.coupang.com/a/iAx2dYWeSi",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 4,
+   "product_url": "https://www.coupang.com/vp/products/8873917078?itemId=25893582150",
+   "old": "https://link.coupang.com/a/h8s24dplRY",
+   "new": "https://link.coupang.com/a/iAx2d35Gns",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 3,
+   "product_url": "https://www.coupang.com/vp/products/7230346370?itemId=18345069577",
+   "old": "https://link.coupang.com/a/hZMFEVZbcO",
+   "new": "https://link.coupang.com/a/iAx2d81jaK",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 2,
+   "product_url": "https://www.coupang.com/vp/products/7230346370?itemId=18345069577",
+   "old": "https://link.coupang.com/a/hZMFEVZbcO",
+   "new": "https://link.coupang.com/a/iAx2d81jaK",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "living",
+   "no": 1,
+   "product_url": "https://www.coupang.com/vp/products/6267699231?itemId=12799889489&vendorItemId=80065914547",
+   "old": "https://link.coupang.com/a/hZMKoV6vYW",
+   "new": "https://link.coupang.com/a/iAx2ebUvJs",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 1,
+   "product_url": "https://www.coupang.com/vp/products/7863347721?itemId=21463523129",
+   "old": "https://link.coupang.com/a/h04yssd4Eu",
+   "new": "https://link.coupang.com/a/iAx2efYaGa",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 2,
+   "product_url": "https://www.coupang.com/vp/products/9024110185?itemId=24068536841&vendorItemId=95980750086",
+   "old": "https://link.coupang.com/a/h086YiC2Mu",
+   "new": "https://link.coupang.com/a/iAx2ej5Ffg",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 46,
+   "product_url": "https://www.coupang.com/vp/products/9432701551?itemId=28047179098",
+   "old": "https://link.coupang.com/a/icDk78MskC",
+   "new": "https://link.coupang.com/a/iAx2eoX3Iq",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 47,
+   "product_url": "https://www.coupang.com/vp/products/7149543833?itemId=14872615781",
+   "old": "https://link.coupang.com/a/icDmaQGcOO",
+   "new": "https://link.coupang.com/a/iAx2m2gjL2",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 48,
+   "product_url": "https://www.coupang.com/vp/products/237183661?itemId=751743193",
+   "old": "https://link.coupang.com/a/icDnhSGH1g",
+   "new": "https://link.coupang.com/a/iAx2m6HsgS",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 49,
+   "product_url": "https://www.coupang.com/vp/products/7163409205?itemId=22831431051",
+   "old": "https://link.coupang.com/a/icDoknefkq",
+   "new": "https://link.coupang.com/a/iAx2ncchki",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 3,
+   "product_url": "https://www.coupang.com/vp/products/8020528863?itemId=22411452806",
+   "old": "https://link.coupang.com/a/h14YRPrdGm",
+   "new": "https://link.coupang.com/a/iAx2nhVtbE",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 4,
+   "product_url": "https://www.coupang.com/vp/products/9148856386?itemId=26936740733",
+   "old": "https://link.coupang.com/a/h14YSCN9sO",
+   "new": "https://link.coupang.com/a/iAx2nno7MG",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 5,
+   "product_url": "https://www.coupang.com/vp/products/9015573975?itemId=23784494591",
+   "old": "https://link.coupang.com/a/h14YEHBYUC",
+   "new": "https://link.coupang.com/a/iAx2nrOdtQ",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 6,
+   "product_url": "https://www.coupang.com/vp/products/188591746?itemId=538573863",
+   "old": "https://link.coupang.com/a/h14YFDtTRk",
+   "new": "https://link.coupang.com/a/iAx2nxUhA4",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 7,
+   "product_url": "https://www.coupang.com/vp/products/7869821820?itemId=22087730176",
+   "old": "https://link.coupang.com/a/h14YLE3Hsy",
+   "new": "https://link.coupang.com/a/iAx2nBVkzY",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 8,
+   "product_url": "https://www.coupang.com/vp/products/7925483056?itemId=21787007376",
+   "old": "https://link.coupang.com/a/h14YMi48NE",
+   "new": "https://link.coupang.com/a/iAx2nFqXIW",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 45,
+   "product_url": "https://www.coupang.com/vp/products/7294517064?itemId=18651601228",
+   "old": "https://link.coupang.com/a/icDi29WNwa",
+   "new": "https://link.coupang.com/a/iAx2nKjmb6",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 9,
+   "product_url": "https://www.coupang.com/vp/products/1747292186?itemId=2975642701",
+   "old": "https://link.coupang.com/a/h14YYu0Mcm",
+   "new": "https://link.coupang.com/a/iAx2nOWdoW",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 10,
+   "product_url": "https://www.coupang.com/vp/products/9132127024?itemId=26872361857",
+   "old": "https://link.coupang.com/a/h14YZQJaIC",
+   "new": "https://link.coupang.com/a/iAx2nT5ET6",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 11,
+   "product_url": "https://www.coupang.com/vp/products/62524064?itemId=19176173794",
+   "old": "https://link.coupang.com/a/h14ZKYHowC",
+   "new": "https://link.coupang.com/a/iAx2nZiSPs",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 12,
+   "product_url": "https://www.coupang.com/vp/products/7189716446?itemId=24063906920",
+   "old": "https://link.coupang.com/a/h14ZLMnLr2",
+   "new": "https://link.coupang.com/a/iAx2n4sSqG",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 13,
+   "product_url": "https://www.coupang.com/vp/products/8605259826?itemId=25177882138",
+   "old": "https://link.coupang.com/a/h14ZPXO8k0",
+   "new": "https://link.coupang.com/a/iAx2n9nkLA",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 14,
+   "product_url": "https://www.coupang.com/vp/products/7427988697?itemId=19285425817",
+   "old": "https://link.coupang.com/a/h14ZQvy9ee",
+   "new": "https://link.coupang.com/a/iAx2oeDdQW",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 15,
+   "product_url": "https://www.coupang.com/vp/products/9651200150?itemId=28846785876",
+   "old": "https://link.coupang.com/a/h14Y7quJPg",
+   "new": "https://link.coupang.com/a/iAx2oj4OAe",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 16,
+   "product_url": "https://www.coupang.com/vp/products/9194324906?itemId=27137060928",
+   "old": "https://link.coupang.com/a/h14Y8qGJki",
+   "new": "https://link.coupang.com/a/iAx2ooKkW4",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 17,
+   "product_url": "https://www.coupang.com/vp/products/7486376106?itemId=26440497275",
+   "old": "https://link.coupang.com/a/h14Z7iaB4K",
+   "new": "https://link.coupang.com/a/iAx2otXySq",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 18,
+   "product_url": "https://www.coupang.com/vp/products/9194316225?itemId=27137027040",
+   "old": "https://link.coupang.com/a/h14Z76ITEy",
+   "new": "https://link.coupang.com/a/iAx2oyDDlk",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 43,
+   "product_url": "https://www.coupang.com/vp/products/9494420428?itemId=28280024590",
+   "old": "https://link.coupang.com/a/icDgYh7gFo",
+   "new": "https://link.coupang.com/a/iAx2w4s2Ts",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 44,
+   "product_url": "https://www.coupang.com/vp/products/7879537929?itemId=25465331347",
+   "old": "https://link.coupang.com/a/icDh0AT8vc",
+   "new": "https://link.coupang.com/a/iAx2w8Me6u",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 19,
+   "product_url": "https://www.coupang.com/vp/products/6466392755?itemId=14095305148",
+   "old": "https://link.coupang.com/a/h14ZlKpQHY",
+   "new": "https://link.coupang.com/a/iAx2xdJmBo",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 20,
+   "product_url": "https://www.coupang.com/vp/products/1255193911?itemId=2255475441",
+   "old": "https://link.coupang.com/a/h14Zmh8AKq",
+   "new": "https://link.coupang.com/a/iAx2xlMzPo",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 21,
+   "product_url": "https://www.coupang.com/vp/products/145024830?itemId=420658639",
+   "old": "https://link.coupang.com/a/h140eY4YbA",
+   "new": "https://link.coupang.com/a/iAx2xqsEii",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 22,
+   "product_url": "https://www.coupang.com/vp/products/6059623179?itemId=11136432209",
+   "old": "https://link.coupang.com/a/h140f69DI4",
+   "new": "https://link.coupang.com/a/iAx2xuLipg",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 52,
+   "product_url": "https://www.coupang.com/vp/products/6924646062?itemId=16734815906",
+   "old": "https://link.coupang.com/a/icDrvb3K9Y",
+   "new": "https://link.coupang.com/a/iAx2xzGVcz",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 53,
+   "product_url": "https://www.coupang.com/vp/products/8729022543?itemId=29007353104",
+   "old": "https://link.coupang.com/a/icDsxWXYWa",
+   "new": "https://link.coupang.com/a/iAx2xEhIxE",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 54,
+   "product_url": "https://www.coupang.com/vp/products/9145443723?itemId=26923678607",
+   "old": "https://link.coupang.com/a/icDtAmDSE0",
+   "new": "https://link.coupang.com/a/iAx2xIFDMq",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 55,
+   "product_url": "https://www.coupang.com/vp/products/4589905358?itemId=17324705003",
+   "old": "https://link.coupang.com/a/icDuCy6RFI",
+   "new": "https://link.coupang.com/a/iAx2xNSRHM",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 56,
+   "product_url": "https://www.coupang.com/vp/products/6163191284?itemId=11975089895",
+   "old": "https://link.coupang.com/a/icDvFbacLs",
+   "new": "https://link.coupang.com/a/iAx2xSyWaG",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 57,
+   "product_url": "https://www.coupang.com/vp/products/161859966?itemId=464915657",
+   "old": "https://link.coupang.com/a/icDwNJZNts",
+   "new": "https://link.coupang.com/a/iAx2xW9bpI",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 23,
+   "product_url": "https://www.coupang.com/vp/products/8259551876?itemId=23791715297",
+   "old": "https://link.coupang.com/a/h14ZehZ0X6",
+   "new": "https://link.coupang.com/a/iAx2x2VBBc",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 24,
+   "product_url": "https://www.coupang.com/vp/products/272656301?itemId=858545359",
+   "old": "https://link.coupang.com/a/h14ZeYfZLg",
+   "new": "https://link.coupang.com/a/iAx2x8ncku",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 25,
+   "product_url": "https://www.coupang.com/vp/products/8837378028?itemId=25753873986",
+   "old": "https://link.coupang.com/a/h14ZsjrmnI",
+   "new": "https://link.coupang.com/a/iAx2ydzfNs",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 26,
+   "product_url": "https://www.coupang.com/vp/products/6624023116?itemId=15072674435",
+   "old": "https://link.coupang.com/a/h14ZykYUou",
+   "new": "https://link.coupang.com/a/iAx2yjhTyK",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 27,
+   "product_url": "https://www.coupang.com/vp/products/1471758571?itemId=2529967077",
+   "old": "https://link.coupang.com/a/h14ZEKYmLQ",
+   "new": "https://link.coupang.com/a/h14ZEKYmLQ",
+   "channel": null,
+   "note": "API가 링크를 발급하지 않음(상품 페이지 403) — 기존 링크 유지"
+  },
+  {
+   "page": "travel",
+   "no": 28,
+   "product_url": "https://www.coupang.com/vp/products/9468421869?itemId=28180058917",
+   "old": "https://link.coupang.com/a/h14ZFJo5sG",
+   "new": "https://link.coupang.com/a/iAx2yo4jKe",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 50,
+   "product_url": "https://www.coupang.com/vp/products/8391768862?itemId=3662368550",
+   "old": "https://link.coupang.com/a/icDpne9Joy",
+   "new": "https://link.coupang.com/a/iAx2yrXwiW",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 51,
+   "product_url": "https://www.coupang.com/vp/products/7072250210?itemId=21020975347",
+   "old": "https://link.coupang.com/a/icDqsK7evZ",
+   "new": "https://link.coupang.com/a/iAx2yujAtg",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 29,
+   "product_url": "https://www.coupang.com/vp/products/1763134617?itemId=3002668215",
+   "old": "https://link.coupang.com/a/h14ZVJrsDQ",
+   "new": "https://link.coupang.com/a/iAx2GIA5ds",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 30,
+   "product_url": "https://www.coupang.com/vp/products/202975551?itemId=594769313",
+   "old": "https://link.coupang.com/a/h14ZWpvCkC",
+   "new": "https://link.coupang.com/a/iAx2GOmkWy",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 31,
+   "product_url": "https://www.coupang.com/vp/products/9269557342?itemId=26573064346",
+   "old": "https://link.coupang.com/a/h14Z0zK4f6",
+   "new": "https://link.coupang.com/a/iAx2GTFrhY",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 32,
+   "product_url": "https://www.coupang.com/vp/products/8750143889?itemId=17731209474",
+   "old": "https://link.coupang.com/a/h14Z1WYfIG",
+   "new": "https://link.coupang.com/a/iAx2GYCyMS",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 33,
+   "product_url": "https://www.coupang.com/vp/products/7415446902?itemId=19223280431",
+   "old": "https://link.coupang.com/a/icC7o0KKY0",
+   "new": "https://link.coupang.com/a/iAx2G2YZj2",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 34,
+   "product_url": "https://www.coupang.com/vp/products/8709824835?itemId=25294694014",
+   "old": "https://link.coupang.com/a/icC8tnMFIi",
+   "new": "https://link.coupang.com/a/iAx2G8Ibbo",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 35,
+   "product_url": "https://www.coupang.com/vp/products/8187781636?itemId=23419209162",
+   "old": "https://link.coupang.com/a/icC9vVTSzA",
+   "new": "https://link.coupang.com/a/iAx2HdCDwi",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 36,
+   "product_url": "https://www.coupang.com/vp/products/9285602759?itemId=27588971035",
+   "old": "https://link.coupang.com/a/icDayMRI9Q",
+   "new": "https://link.coupang.com/a/iAx2HhVhDg",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 37,
+   "product_url": "https://www.coupang.com/vp/products/8826151715?itemId=25719353644",
+   "old": "https://link.coupang.com/a/icDbBwvj0T",
+   "new": "https://link.coupang.com/a/iAx2Hn2wcS",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 38,
+   "product_url": "https://www.coupang.com/vp/products/8502695510?itemId=24313209289",
+   "old": "https://link.coupang.com/a/icDDr7bpoy",
+   "new": "https://link.coupang.com/a/iAx2HsH2zI",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 39,
+   "product_url": "https://www.coupang.com/vp/products/9727281965?itemId=29109103056",
+   "old": "https://link.coupang.com/a/icDdeHEoCG",
+   "new": "https://link.coupang.com/a/iAx2HvV4AC",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 40,
+   "product_url": "https://www.coupang.com/vp/products/8919025615?itemId=20732054119",
+   "old": "https://link.coupang.com/a/icDeiLc9Iq",
+   "new": "https://link.coupang.com/a/iAx2Hy6Sho",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 41,
+   "product_url": "https://www.coupang.com/vp/products/9135610211?itemId=3487215021",
+   "old": "https://link.coupang.com/a/icDfkXF8I8",
+   "new": "https://link.coupang.com/a/iAx2HE9I8y",
+   "channel": "pickshelf",
+   "note": null
+  },
+  {
+   "page": "travel",
+   "no": 42,
+   "product_url": "https://www.coupang.com/vp/products/8548534773?itemId=24968420625",
+   "old": "https://link.coupang.com/a/icDAUnKPIW",
+   "new": "https://link.coupang.com/a/iAx2HJJYnA",
+   "channel": "pickshelf",
+   "note": null
+  }
+ ]
+}
